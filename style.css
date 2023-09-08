@@ -1,0 +1,208 @@
+body {
+    background-image: url("https://drive.google.com/uc?id=18szdnQGzoTM8zCWM43-6bPk44G_x0anb");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.background {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-color: black;
+    opacity: 0.5;
+}
+
+section {
+    min-height: 100vh;
+}
+
+/* track style*/
+
+    .track-container {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .track {
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: fit-content;
+        padding: 2rem;
+    }
+
+    .album-cover {
+        display: flex;
+        align-items: center;
+        isolation: isolate;
+        padding-right: 4rem;
+    }
+
+    .image-container {
+        width: 12.5rem;
+        height: 12.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    img.album-image {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    img.disc-image {
+        height: 11rem;
+        width: 11rem;
+    }
+
+    .disc {
+        position: absolute;
+        z-index: -1;
+        margin-left: 5.5rem;
+    }
+
+    /* track info */
+
+    .track-info {
+        margin-top: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        margin: 0.25rem auto;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    /* audio control */
+
+    .controls {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2.25rem;
+    }
+
+    audio {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .time-labels {
+        margin-bottom: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: #191919;
+    }
+
+    .seek-bar {
+        width: 100%;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 4px;
+        background-color: #ffffff;
+        border-radius: 5rem;
+        isolation: isolate;
+    }
+
+    .progress {
+        height: 100%;
+        width: 0;
+        background-color: #3F213F;
+        border-radius: 5rem;
+    }
+
+    .seek-handle {
+        width: 15px;
+        height: 15px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        border: 4px solid #3F213F;
+        margin-top: -10px;
+        position: relative;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(6rem ,auto));
+        margin-top: 2rem;
+        align-items: center;
+    }
+
+    .fa-step-backward, .fa-step-forward {
+        font-size: 2.5rem;
+        color: #A25270;
+        background-color: transparent;
+        padding: 0.5rem;
+        transition: border-color 0.3s ease;
+    }
+
+    .fa-step-backward:hover, .fa-step-forward:hover {
+        background-color: #89335B;
+        border-radius: 5px;
+    }
+
+    .fa-step-backward:active, .fa-step-forward:active {
+        color: #89335B;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid #89335B;
+    }
+
+    .fa-play-circle, .fa-pause-circle {
+        font-size: 6rem;
+        color: #89335B;
+    }
+
+    .fa-play-circle:hover, .fa-pause-circle:hover {
+        border-radius: 50%;
+        background-color: #89335B;
+        color: rgba(255,255,255,0.8);
+    }
+
+    .fa-play-circle:active, .fa-pause-circle:active {
+        border-radius: 50%;
+        background-color: #A25270;
+        color: rgba(255,255,255,0.8);
+    }
+
+    button {
+        background-color: transparent;
+        border: transparent;
+        cursor: pointer;
+    }
+
+    button i:hover {
+        color: rgba(255,255,255,0.8);
+    }
